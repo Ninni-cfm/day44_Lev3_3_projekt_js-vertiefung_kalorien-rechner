@@ -4,7 +4,6 @@
 // Greeting from StackOverflow :-)
 const varToString = varObj => Object.keys(varObj)[0];
 function debugVar(expr) {
-
     console.log(varToString(expr) + ": ", eval(expr));
 }
 
@@ -23,14 +22,13 @@ let palTable = [
 initialize();
 
 
+
 function initialize() {
     palTable.forEach(entry => {
         document.getElementById("selectActivity").innerHTML +=
             `<option value="${entry.factor}">${entry.activity}</option>`;
     });
 }
-
-function onMouseOver() { }
 
 
 calculateCalories = () => {
