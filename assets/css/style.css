@@ -6,5 +6,94 @@
 
 /* Scrolling should always be smooth... */
 html {
-    scroll-behavior: smooth;
+    --radiant1: #b0c8e0;
+    --radiant2: #758595;
+
+    --headlineColor: #263c55;
+    --labelColor: #31475f;
+    --inputColor: #e5eef7;
+    --inputBackground: #e5eef7;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form {
+    background: linear-gradient(var(--radiant1), var(--radiant2));
+
+    width: 400px;
+    margin: 50px auto 0;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+}
+
+h1 {
+    color: var(--headlineColor);
+    text-align: center;
+    text-shadow: 0px 0px 10px 10px silver;
+}
+
+label {
+    color: var(--labelColor);
+    padding-top: 1rem;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+input,
+select {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.3em;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+/*****************************************************************************
+    Build a table...
+*/
+.table {
+    background: white;
+    font-size: 1em;
+    font-weight: 600;
+    border: 1px inset silver;
+}
+.tableHeader {
+    background: blue;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px 5px silver;
+}
+.tableRow {
+    display: flex;
+    border-bottom: 1px inset silver;
+}
+.tableRow > p {
+    padding: 0.25rem;
+}
+.tableRow > p:not(:first-of-type) {
+    width: 20%;
+    text-align: right;
+    padding-right: 1rem;
+}
+.tableRow > p:first-of-type {
+    width: 60%;
+    padding-left: 0.5rem;
+}
+.tableRow p:nth-of-type(2) {
+    border-left: 1px inset silver;
+    border-right: 1px inset silver;
+}
+
+.info {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
 }

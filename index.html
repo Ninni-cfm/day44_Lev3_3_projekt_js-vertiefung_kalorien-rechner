@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,56 @@
 
     <title>Document</title>
 </head>
+
 <body>
-    
-	<script src="assets/js/main.js"></script>
+
+    <form action="">
+        <h1>Kalorien-Rechner</h1>
+        <label for="numHeight">Körpergröße (cm)</label>
+        <input type="number" name="numHeight" id="numHeight">
+
+        <label for="numAge">Alter</label>
+        <input type="number" name="numAge" id="numAge">
+
+        <label for="">Gewicht (kg)</label>
+        <input type="number" name="numWeight" id="numWeight">
+
+        <label for="radioGender">Geschlecht</label>
+        <p><input type="radio" name="radioGender" id="radioFemale" checked>&nbsp;Weiblich</p>
+        <p><input type="radio" name="radioGender" id="radioMale">&nbsp;Männlich</p>
+
+        <label for="">Arbeits- und Freizeitaktivität</label>
+        <select name="selectActivity" id="selectActivity">
+            <option value="0">&mdash; Bitte eine Tätigkeit auswählen &mdash;</option>
+        </select>
+
+        <input type="button" value="Submit" onclick="calculateCalories()">
+        <p onmouseover="onMouseOver()">HALLO</p>
+
+        <div class="table">
+            <div class="tableRow tableHeader">
+                <p>&nbsp;</p>
+                <p>kcal</p>
+                <p>kJ</p>
+            </div>
+            <div class="tableRow">
+                <p>Grundumsatz</p>
+                <p id="baseKCal">000</p>
+                <p id="baseKJ">000</p>
+            </div>
+            <div class="tableRow">
+                <p>Gesamtumsatz</p>
+                <p id="totalKCal">000</p>
+                <p id="totalKJ">000</p>
+            </div>
+        </div>
+
+        <p class="info">Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen, da es verschiedene
+            Fehlermöglichkeiten
+            gibt wie abweichender Grundumsatz, falsche Zeiteinschätzung etc.</p>
+    </form>
+
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
